@@ -24,5 +24,5 @@ class Solution:
         return []
 
 if __name__ == '__main__':
-	result = Solution().twoSum((1,3,9,7),10)
-	print(result)
+    result = Solution().twoSum((1,3,9,7),10)
+    print(result)
