@@ -18,9 +18,9 @@ class Solution:
         """
         buffer_dic = {}
         for i,num in enumerate(nums):
-        	if target - num in buffer_dic:
-        		return [buffer_dic[target - num], i]
-        	buffer_dic[num] = i
+            if target - num in buffer_dic:
+                return [buffer_dic[target - num], i]
+            buffer_dic[num] = i
         return []
 
     def two_sum_2(self, nums, target):
