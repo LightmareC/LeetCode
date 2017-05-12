@@ -36,5 +36,5 @@ class Solution:
         return []
 
 if __name__ == '__main__':
-    result = Solution().two_sum((1,3,9,7),8)
+    result = Solution().two_sum([1,3,9,7],8)
     print(result)
