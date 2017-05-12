@@ -10,19 +10,31 @@
 
 
 class Solution:
-    def twoSum(self, nums, target):
+    def two_sum(self, nums, target):
         """
         :type nums: List[int]
         :type target: int
         :rtype: List[int]
         """
         buffer_dic = {}
-        for index,num in enumerate(nums):
+        for i,num in enumerate(nums):
         	if target - num in buffer_dic:
-        		return [buffer_dic[target - num], index]
-        	buffer_dic[num] = index
+        		return [buffer_dic[target - num], i]
+        	buffer_dic[num] = i
+        return []
+
+    def two_sum_2(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        for i,num in enumerate(nums):
+            j = target - num
+            if j in nums[i+1:]:
+                return [i, nums.i(j)]
         return []
 
 if __name__ == '__main__':
-    result = Solution().twoSum((1,3,9,7),10)
+    result = Solution().two_sum((1,3,9,7),8)
     print(result)
