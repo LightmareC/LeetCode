@@ -14,4 +14,15 @@ class Solution(object):
         :type s: str
         :rtype: int
         """
-        
+        longest, start, last = 0, 0, [-1 for _ in xrange(256)]
+        for i, char in enumerate(s):
+        	if last[ord(char)] >= start:
+        		start = last[ord(char)] + 1
+        	longest = max(longest, i-start+1)
+        	last[ord(char)] = i
+
+        return longest
+
+if __name__ == '__main__':
+	print Solution().lengthOfLongestSubstring("abcccdefg")
+
