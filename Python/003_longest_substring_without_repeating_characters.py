@@ -24,5 +24,5 @@ class Solution(object):
         return longest
 
 if __name__ == '__main__':
-	print Solution().lengthOfLongestSubstring("abcccdefg")
+	print Solution().lengthOfLongestSubstring("abc-c--defg")
 
