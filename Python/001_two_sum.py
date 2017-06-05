@@ -32,9 +32,9 @@ class Solution:
         for i,num in enumerate(nums):
             j = target - num
             if j in nums[i+1:]:
-                return [i, nums.i(j)]
+                return [i, nums.index(j)]
         return []
 
 if __name__ == '__main__':
-    result = Solution().two_sum([1,3,9,7],8)
+    result = Solution().two_sum_2([1,3,9,7],8)
     print(result)
